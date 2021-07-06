@@ -18,6 +18,11 @@ X = sc.fit_transform(X)
 def predict_note_authentication(Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age):
   predict= model.predict(sc.transform([[Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age]]))
   print("cluster number", predict)
+  if predict==[0]:
+  print("Patient has no diseases")
+
+  else:
+  print("Patient has diseases" )
   
 def main():
     
