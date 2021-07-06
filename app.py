@@ -35,10 +35,10 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     st.header("Disease Prediction using K-Means Algorithm")
     
-    UserID = st.text_input("UserID","")
+    #UserID = st.text_input("UserID","")
     
     #Gender1 = st.select_slider('Select a Gender Male:1 Female:0',options=['1', '0'])
-    Gender = st.number_input('Insert Gender Male:1 Female:0')
+    #Gender = st.number_input('Insert Gender Male:1 Female:0')
     Age = st.number_input('Insert a Age',18,60)
     Glucose = st.number_input("Insert of glucose",100,1000)
     BP = st.number_input("Insert BP",0,50)
@@ -48,7 +48,7 @@ def main():
     PedigreeFunction = st.number_input("Insert PedigreeFunction",0,10)
     resul=""
     if st.button("Predict"):
-      result=predict_note_authentication(UserID, Gender,Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age)
+      result=predict_note_authentication(Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age)
       st.success('Model has predicted {}'.format(result))
       
     if st.button("About"):
