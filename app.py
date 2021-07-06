@@ -39,13 +39,14 @@ def main():
     
     #Gender1 = st.select_slider('Select a Gender Male:1 Female:0',options=['1', '0'])
     #Gender = st.number_input('Insert Gender Male:1 Female:0')
-    Age = st.number_input('Insert a Age',18,60)
+    
     Glucose = st.number_input("Insert of glucose",100,1000)
     BP = st.number_input("Insert BP",0,50)
     SkinThickness = st.number_input("Insert SkinThickness ",0,60)
     Insulin = st.number_input("Insert Insulin ",0,1000)
     BMI = st.number_input("Insert BMI ",0,80)
     PedigreeFunction = st.number_input("Insert PedigreeFunction",0,10)
+    Age = st.number_input('Insert a Age',18,60)
     resul=""
     if st.button("Predict"):
       result=predict_note_authentication(Glucose,BP,SkinThickness,Insulin,BMI,PedigreeFunction,Age)
